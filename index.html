@@ -7,7 +7,7 @@
     <style>
       :root {
         --hero-height: 360px;
-        --overlay: 0.55; /* increase to 0.7 if you need it darker */
+        --overlay: 0.55; /* increase (0.65–0.75) to darken more */
       }
 
       html, body {
@@ -23,7 +23,7 @@
         border-radius: 16px;
         overflow: hidden;
         display: grid;
-        align-items: center;
+        place-items: center; /* centers the text */
       }
 
       .hero img {
@@ -45,21 +45,28 @@
         position: relative;
         z-index: 1;
         margin: 0;
-        padding: 0 36px;
+        padding: 0 48px;
+
         color: #fff;
+        text-align: center;
+
         font-size: clamp(28px, 4.2vw, 56px);
         line-height: 1.08;
         letter-spacing: -0.02em;
         text-shadow: 0 2px 18px rgba(0,0,0,0.35);
-        max-width: 22ch; /* makes it wrap nicely; increase if you want fewer lines */
+
+        max-width: 34ch;      /* controls how wide the 2 lines are */
+        margin-inline: auto;  /* centers the text block */
       }
     </style>
   </head>
 
   <body>
     <div class="hero">
+      <!-- Use a relative path if the image is in the same repo (recommended),
+           or replace with your working full GitHub Pages image URL -->
       <img src="Screenshot-2024-07-17-at-8.16.png" alt="">
-      <h1>From Camping Under The Stars To Building Robots, We Help Young People Discover Their Best Selves.</h1>
-    </div>
-  </body>
-</html>
+
+      <h1>
+        From Camping Under The Stars To Building Robots,<br>
+        We Help Young People
